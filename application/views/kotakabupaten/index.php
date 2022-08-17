@@ -2,6 +2,7 @@
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Kota/kabupaten</h1>
   </div>
+  <a href="<?= base_url('kotakabupaten/tambah') ?>" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Tambah Data</a>
   <table class="table">
     <thead>
       <tr>
