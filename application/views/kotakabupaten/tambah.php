@@ -6,7 +6,7 @@
   <form action="<?= base_url('kotakabupaten/tambah'); ?>" method="post">
     <div class="mb-3">
       <label for="nama" class="form-label">Kota/Kabupaten</label>
-      <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama kota/kabupaten...">
+      <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama kota/kabupaten..." value="<?= set_value('nama'); ?>">
       <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
     </div>
     <div class="mb-3">
