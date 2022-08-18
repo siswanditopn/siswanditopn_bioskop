@@ -20,7 +20,7 @@ class Film extends CI_Controller {
 
 	public function tambah()
   {
-		$this->form_validation->set_rules('judul', 'Judul Film', 'required|trim');
+		$this->form_validation->set_rules('judul', 'Judul Film', 'required|trim|is_unique[film.judul]');
 		$this->form_validation->set_rules('tgl_launc', 'Tanggal Rilis', 'required|trim');
 		$this->form_validation->set_rules('synopsys', 'Sipnosis', 'required|trim');
 
