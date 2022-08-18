@@ -69,7 +69,7 @@ class Film_model extends CI_model {
       $KodeHuruf = $HurufKata[0].$HurufKata[$jumKata-1];
     }
 
-    $KodeAngka = str_pad($jumData, 3, "0", STR_PAD_LEFT);
+    $KodeAngka = str_pad($jumData+1, 3, "0", STR_PAD_LEFT);
 
     $data = [
               'kode'      => strtoupper($KodeHuruf).$KodeAngka,
