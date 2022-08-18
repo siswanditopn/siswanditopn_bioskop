@@ -17,4 +17,21 @@ class Kotakabupaten extends CI_Controller {
     $this->load->view('kotakabupaten/index', $data);
 		$this->load->view('template/footer');
 	}
+
+	public function tambah()
+  {
+		$this->form_validation->set_rules('nama', 'Kota/Kabupaten', 'required|trim');
+
+		if ($this->form_validation->run() == false) {
+			$this->load->view('template/head');
+			$this->load->view('template/body_header');
+			$this->load->view('template/body_menu');
+			$this->load->view('kotakabupaten/tambah');
+			$this->load->view('template/footer');
+		} else {
+			$this->Kotakabupaten_model->simpan();
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil tambah data!</div>');
+			redirect('kotakabupaten');
+		}
+	}
 }

@@ -3,6 +3,7 @@
     <h1 class="h2">Kota/kabupaten</h1>
   </div>
   <a href="<?= base_url('kotakabupaten/tambah') ?>" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Tambah Data</a>
+  <?= $this->session->flashdata('message'); ?>
   <table class="table">
     <thead>
       <tr>
